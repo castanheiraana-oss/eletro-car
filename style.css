@@ -1,1 +1,342 @@
+/* RESET & ESTILOS GERAIS */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
 
+body {
+    background-color: #080808; /* Fundo Preto / Dark */
+    color: #ffffff;
+    scroll-behavior: smooth;
+}
+
+span {
+    color: #00ff88; /* Verde Neon elétrico */
+}
+
+/* NAVBAR */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 8%;
+    background-color: rgba(10, 10, 10, 0.95);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    border-bottom: 1px solid #222;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+.logo-icon {
+    color: #00ff88;
+    margin-right: 8px;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    gap: 30px;
+}
+
+nav a {
+    color: #ccc;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+nav a:hover {
+    color: #00ff88;
+}
+
+.btn-nav {
+    background: transparent;
+    border: 1px solid #00ff88;
+    color: #00ff88;
+    padding: 8px 20px;
+    text-decoration: none;
+    border-radius: 20px;
+    transition: 0.3s;
+}
+
+.btn-nav:hover {
+    background: #00ff88;
+    color: #000;
+}
+
+/* HERO SECTION */
+.hero {
+    height: 100vh;
+    background: linear-gradient(rgba(0,0,0,0.7), rgba(8,8,8,1)), 
+                url('https://images.unsplash.com/photo-1503376780353-7e6692767b70?w=1600&auto=format&fit=crop') center/cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 0 20px;
+}
+
+.hero-content h1 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+}
+
+.hero-content p {
+    font-size: 1.2rem;
+    color: #aaa;
+    max-width: 600px;
+    margin: 0 auto 30px;
+}
+
+.hero-btns {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+}
+
+/* BOTAO PADRAO */
+.btn-primary {
+    background-color: #00ff88;
+    color: #000;
+    padding: 12px 25px;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    transition: 0.3s;
+    display: inline-block;
+}
+
+.btn-primary:hover {
+    box-shadow: 0 0 15px #00ff88;
+    transform: translateY(-2px);
+}
+
+.btn-secondary {
+    border: 1px solid #fff;
+    color: #fff;
+    padding: 12px 25px;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 5px;
+    transition: 0.3s;
+}
+
+.btn-secondary:hover {
+    background: #fff;
+    color: #000;
+}
+
+/* SEÇÕES */
+.section-container {
+    padding: 100px 8%;
+}
+
+.title {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
+
+.subtitle {
+    text-align: center;
+    color: #888;
+    margin-bottom: 50px;
+}
+
+/* CARDS DOS CARROS */
+.car-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+.car-card {
+    background-color: #121212;
+    border: 1px solid #222;
+    border-radius: 10px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: 0.3s;
+}
+
+.car-card:hover {
+    border-color: #00ff88;
+}
+
+.car-img-box {
+    width: 100%;
+    height: 200px;
+    overflow: hidden;
+    border-radius: 8px;
+    margin-bottom: 15px;
+}
+
+.car-img-box img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: 0.3s;
+}
+
+.car-card h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+.car-desc {
+    color: #aaa;
+    font-size: 0.9rem;
+    margin-bottom: 15px;
+}
+
+/* SELETOR DE COR */
+.color-selector {
+    margin-bottom: 15px;
+}
+
+.color-selector p {
+    font-size: 0.8rem;
+    color: #888;
+    margin-bottom: 5px;
+}
+
+.colors {
+    display: flex;
+    gap: 10px;
+}
+
+.dot {
+    height: 20px;
+    width: 20px;
+    border-radius: 50%;
+    cursor: pointer;
+    border: 2px solid #444;
+}
+
+.dot:hover {
+    transform: scale(1.2);
+}
+
+.car-specs {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 15px;
+    font-size: 0.85rem;
+    color: #00ff88;
+}
+
+.price {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.card-btns {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.btn-card {
+    width: 100%;
+    padding: 10px;
+    background: #00ff88;
+    border: none;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.btn-external {
+    width: 100%;
+    padding: 10px;
+    background: #222;
+    color: #00ff88;
+    border: 1px solid #00ff88;
+    text-align: center;
+    text-decoration: none;
+    font-size: 0.85rem;
+    border-radius: 5px;
+    transition: 0.3s;
+}
+
+.btn-external:hover {
+    background: #00ff88;
+    color: #000;
+}
+
+/* TECNOLOGIA / PEÇAS */
+.tech-section {
+    background-color: #0d0d0d;
+}
+
+.tech-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
+}
+
+.tech-card {
+    background: #151515;
+    padding: 20px;
+    border-radius: 8px;
+    text-align: center;
+}
+
+.tech-card img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 5px;
+    margin-bottom: 15px;
+}
+
+/* CONTATO */
+.contact-box {
+    background: #121212;
+    border: 1px solid #222;
+    padding: 40px;
+    border-radius: 10px;
+    text-align: center;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.contact-info {
+    margin: 30px 0;
+    text-align: left;
+}
+
+.info-item {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 15px;
+    font-size: 1.1rem;
+}
+
+.info-item i {
+    color: #00ff88;
+    font-size: 1.5rem;
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    background: #000;
+    color: #555;
+    border-top: 1px solid #111;
+}
