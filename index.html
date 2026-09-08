@@ -1,1 +1,189 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EletroCar - O Futuro Elétrico</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Ícones via FontAwesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
 
+    <!-- CABEÇALHO / NAVBAR -->
+    <header>
+        <div class="logo">
+            <i class="fa-solid fa-bolt logo-icon"></i>
+            <span>ELETRO<b>CAR</b></span>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#home">Início</a></li>
+                <li><a href="#modelos">Modelos</a></li>
+                <li><a href="#tecnologia">Tecnologia & Peças</a></li>
+                <li><a href="#contato">Contato</a></li>
+            </ul>
+        </nav>
+        <a href="#modelos" class="btn-nav">Ver Modelos</a>
+    </header>
+
+    <!-- HERO SECTION -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h1>A REVOLUÇÃO DOS CARROS ELÉTRICOS</h1>
+            <p>Design futurista, zero emissão e a melhor tecnologia de telemetria em nuvem do mercado.</p>
+            <div class="hero-btns">
+                <a href="#modelos" class="btn-primary">Conhecer Frota</a>
+                <a href="https://ev-database.org" target="_blank" class="btn-secondary"><i class="fa-solid fa-network-wired"></i> Acessar Portal de Dados</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- VITRINE DE MODELOS -->
+    <section id="modelos" class="section-container">
+        <h2 class="title">NOSSOS <span>MODELOS</span></h2>
+        
+        <div class="car-grid">
+
+            <!-- Carro 1: SUV -->
+            <div class="car-card">
+                <div class="car-img-box">
+                    <img id="img-ec-titan" src="https://images.unsplash.com/photo-1560958089-b8a1929cea89?w=600&auto=format&fit=crop" alt="EletroCar Titan SUV">
+                </div>
+                <h3>EletroCar Titan (SUV)</h3>
+                <p class="car-desc">SUV robusto para família, tração integral e autonomia de 600km.</p>
+                <div class="color-selector">
+                    <p>Escolha a cor:</p>
+                    <div class="colors">
+                        <span class="dot active" style="background: #000;" onclick="mudarCor('ec-titan', 'https://images.unsplash.com/photo-1560958089-b8a1929cea89?w=600&auto=format&fit=crop')"></span>
+                        <span class="dot" style="background: #e74c3c;" onclick="mudarCor('ec-titan', 'https://images.unsplash.com/photo-1617788138017-80ad40651399?w=600&auto=format&fit=crop')"></span>
+                        <span class="dot" style="background: #3498db;" onclick="mudarCor('ec-titan', 'https://images.unsplash.com/photo-1541348263662-e082662d82da?w=600&auto=format&fit=crop')"></span>
+                    </div>
+                </div>
+                <div class="car-specs">
+                    <span><i class="fa-solid fa-gauge-high"></i> 0-100: 3.8s</span>
+                    <span><i class="fa-solid fa-battery-full"></i> 600 Km</span>
+                </div>
+                <div class="price">R$ 380.000,00</div>
+                <div class="card-btns">
+                    <button class="btn-card" onclick="comprarCarro('EletroCar Titan')">Encomendar</button>
+                    <!-- Link Externo para pegar mais informações do carro -->
+                    <a href="https://ev-database.org" target="_blank" class="btn-external"><i class="fa-solid fa-circle-info"></i> Telemetria Externa</a>
+                </div>
+            </div>
+
+            <!-- Carro 2: Esportivo -->
+            <div class="car-card">
+                <div class="car-img-box">
+                    <img id="img-ec-cyber" src="https://images.unsplash.com/photo-1617814076367-b759c7d7e738?w=600&auto=format&fit=crop" alt="EletroCar Cyber GT">
+                </div>
+                <h3>EletroCar Cyber GT</h3>
+                <p class="car-desc">Esportivo de altíssimo desempenho com linhas aerodinâmicas agressivas.</p>
+                <div class="color-selector">
+                    <p>Escolha a cor:</p>
+                    <div class="colors">
+                        <span class="dot active" style="background: #111;" onclick="mudarCor('ec-cyber', 'https://images.unsplash.com/photo-1617814076367-b759c7d7e738?w=600&auto=format&fit=crop')"></span>
+                        <span class="dot" style="background: #f1c40f;" onclick="mudarCor('ec-cyber', 'https://images.unsplash.com/photo-1503376780353-7e6692767b70?w=600&auto=format&fit=crop')"></span>
+                    </div>
+                </div>
+                <div class="car-specs">
+                    <span><i class="fa-solid fa-gauge-high"></i> 0-100: 2.1s</span>
+                    <span><i class="fa-solid fa-battery-full"></i> 520 Km</span>
+                </div>
+                <div class="price">R$ 620.000,00</div>
+                <div class="card-btns">
+                    <button class="btn-card" onclick="comprarCarro('EletroCar Cyber GT')">Encomendar</button>
+                    <a href="https://ev-database.org" target="_blank" class="btn-external"><i class="fa-solid fa-circle-info"></i> Telemetria Externa</a>
+                </div>
+            </div>
+
+            <!-- Carro 3: Urbano Compacto -->
+            <div class="car-card">
+                <div class="car-img-box">
+                    <img id="img-ec-city" src="https://images.unsplash.com/photo-1549399542-7e3f8b79c341?w=600&auto=format&fit=crop" alt="EletroCar City">
+                </div>
+                <h3>EletroCar City Neo</h3>
+                <p class="car-desc">Perfeito para o dia a dia na cidade. Compacto, ágil e ultra econômico.</p>
+                <div class="color-selector">
+                    <p>Escolha a cor:</p>
+                    <div class="colors">
+                        <span class="dot active" style="background: #000;" onclick="mudarCor('ec-city', 'https://images.unsplash.com/photo-1549399542-7e3f8b79c341?w=600&auto=format&fit=crop')"></span>
+                        <span class="dot" style="background: #2ecc71;" onclick="mudarCor('ec-city', 'https://images.unsplash.com/photo-1552519507-da3b142c6e3d?w=600&auto=format&fit=crop')"></span>
+                    </div>
+                </div>
+                <div class="car-specs">
+                    <span><i class="fa-solid fa-gauge-high"></i> 0-100: 6.5s</span>
+                    <span><i class="fa-solid fa-battery-full"></i> 350 Km</span>
+                </div>
+                <div class="price">R$ 159.900,00</div>
+                <div class="card-btns">
+                    <button class="btn-card" onclick="comprarCarro('EletroCar City Neo')">Encomendar</button>
+                    <a href="https://ev-database.org" target="_blank" class="btn-external"><i class="fa-solid fa-circle-info"></i> Telemetria Externa</a>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- ANATOMIA E PEÇAS DO CARRO ELÉTRICO -->
+    <section id="tecnologia" class="section-container tech-section">
+        <h2 class="title">TECNOLOGIA & <span>PEÇAS DO MOTOR</span></h2>
+        <p class="subtitle">Entenda o que faz nossos veículos serem extremamente potentes e eficientes.</p>
+
+        <div class="tech-grid">
+            <div class="tech-card">
+                <img src="https://images.unsplash.com/photo-1558441719-6782808399e1?w=400&auto=format&fit=crop" alt="Bateria de Lítio">
+                <h3>Pack de Baterias 100kWh</h3>
+                <p>Localizado no assoalho para garantir baixo centro de gravidade e estabilidade máxima nas curvas.</p>
+            </div>
+            <div class="tech-card">
+                <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=400&auto=format&fit=crop" alt="Motor Elétrico">
+                <h3>Motor de Imã Permanente</h3>
+                <p>Entrega torque instantâneo com mais de 97% de eficiência energética e zero ruído.</p>
+            </div>
+            <div class="tech-card">
+                <img src="https://images.unsplash.com/photo-1518770660439-4636190af475?w=400&auto=format&fit=crop" alt="Inversor de Potência">
+                <h3>Inversor Central & CPU</h3>
+                <p>O cérebro do carro. Converte energia DC para AC e gerencia o sistema de aceleração inteligente.</p>
+            </div>
+        </div>
+
+        <!-- Botão para site de informações técnicas avançadas -->
+        <div style="text-align: center; margin-top: 40px;">
+            <a href="https://www.tesla.com/supercharger" target="_blank" class="btn-primary">
+                <i class="fa-solid fa-microchip"></i> Ver Mais Detalhes Técnicos em Nosso Servidor Externo
+            </a>
+        </div>
+    </section>
+
+    <!-- CONTATO COM A DONA -->
+    <section id="contato" class="section-container">
+        <div class="contact-box">
+            <h2>FALE DIRETO COM A PROPRIETÁRIA</h2>
+            <p>Dúvidas, vendas corporativas ou atendimento personalizado diretamente com a fundadora da EletroCar.</p>
+            
+            <div class="contact-info">
+                <div class="info-item">
+                    <i class="fa-solid fa-user-gear"></i>
+                    <span><b>Proprietária:</b> Ana Clara S.</span>
+                </div>
+                <div class="info-item">
+                    <i class="fa-brands fa-whatsapp"></i>
+                    <span><b>Atendimento / WhatsApp:</b> +55 (11) 98765-4321</span>
+                </div>
+            </div>
+
+            <button class="btn-primary" onclick="entrarEmContato()">
+                <i class="fa-brands fa-whatsapp"></i> Iniciar Conversa no WhatsApp
+            </button>
+        </div>
+    </section>
+
+    <!-- RODAPÉ -->
+    <footer>
+        <p>&copy; 2026 EletroCar Inc. Todos os direitos reservados. Projeto Futurista.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
